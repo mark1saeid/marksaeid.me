@@ -1,0 +1,100 @@
+{
+    "name": "zagrodzki.me",
+    "description": "My personal website",
+    "author": "Mark Saeid",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "./build.sh redirect algolia feed next",
+        "start": "next start",
+        "tsc": "tsc --noEmit",
+        "ts-node-esm": "node --loader ts-node/esm -r tsconfig-paths/register --experimental-specifier-resolution=node",
+        "algolia": "yarn ts-node-esm generateAlgoliaItems.ts",
+        "feed": "yarn ts-node-esm generateFeed.ts",
+        "new-post-redirect": "yarn ts-node-esm generateNewPostRedirect.ts",
+        "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,css,scss,md,mdx}\"",
+        "lint": "next lint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Bartek532/zagrodzki.me"
+    },
+    "bugs": {
+        "url": "https://github.com/Bartek532/zagrodzki.me/issues"
+    },
+    "homepage": "https://zagrodzki.me",
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "**/*.{js,jsx,ts,tsx}": [
+            "eslint --fix"
+        ],
+        "**/*.{json,css,scss,md,mdx}": [
+            "prettier --write"
+        ]
+    },
+    "dependencies": {
+        "@sendgrid/mail": "^7.6.0",
+        "algoliasearch": "^4.11.0",
+        "classnames": "^2.3.1",
+        "countapi-js": "^1.0.2",
+        "dayjs": "^1.10.7",
+        "eslint-plugin-import": "^2.25.4",
+        "feed": "^4.2.2",
+        "framer-motion": "^5.3.3",
+        "gray-matter": "^4.0.3",
+        "invariant": "^2.2.4",
+        "next": "12.0.4",
+        "next-mdx-remote": "^3.0.8",
+        "next-pwa": "^5.4.4",
+        "next-transpile-modules": "^9.0.0",
+        "plaiceholder": "^2.2.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-dom-confetti": "^0.2.0",
+        "react-github-btn": "^1.2.1",
+        "react-hook-form": "^7.25.0",
+        "react-instantsearch-dom": "^6.18.0",
+        "react-query": "^3.33.7",
+        "reading-time": "^1.5.0",
+        "sharp": "^0.29.3",
+        "slugify": "^1.6.4",
+        "yup": "^0.32.11"
+    },
+    "devDependencies": {
+        "@mapbox/rehype-prism": "^0.8.0",
+        "@svgr/webpack": "^5.5.0",
+        "@types/gtag.js": "^0.0.8",
+        "@types/invariant": "^2.2.35",
+        "@types/node": "16.11.10",
+        "@types/react": "17.0.37",
+        "@types/react-dom": "^17.0.11",
+        "@types/react-instantsearch-dom": "^6.12.1",
+        "@typescript-eslint/eslint-plugin": "^5.10.1",
+        "@typescript-eslint/parser": "^5.10.1",
+        "clsx": "^1.1.1",
+        "eslint": "7",
+        "eslint-config-next": "12.0.4",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "husky": "4",
+        "lint-staged": "^12.3.2",
+        "next-seo": "^4.28.1",
+        "prettier": "^2.5.1",
+        "rehype-stringify": "8",
+        "remark-rehype": "8",
+        "sass": "^1.49.0",
+        "ts-node": "^10.4.0",
+        "tsconfig-paths": "^3.12.0",
+        "typescript": "^4.5.4",
+        "unified": "9.1",
+        "unist-util-visit": "2.0.3"
+    }
+}

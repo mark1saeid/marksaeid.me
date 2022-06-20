@@ -1,0 +1,31 @@
+@use "styles/_mixins";
+.link .text {
+  color: var(--main);
+  padding: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: 0% 1.7px;
+  -webkit-transition: background-size 0.25s ease;
+  transition: background-size 0.25s ease;
+}
+
+.link .text:hover, .link .text:focus {
+  background-size: 100% 1.7px;
+}
+
+.link .icon {
+  padding: 0 0.7rem;
+  white-space: nowrap;
+}
+
+.link .icon svg {
+  width: 10px;
+  display: inline;
+}
+
+.link .icon svg path {
+  stroke: var(--main);
+}
+/*# sourceMappingURL=link.module.css.map */
