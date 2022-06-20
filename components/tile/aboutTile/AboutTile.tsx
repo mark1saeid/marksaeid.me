@@ -8,7 +8,7 @@ import styles from "./aboutTile.module.scss";
 export const AboutTile = () => {
   return (
 
-      <a className={styles.tile}>
+      <div className={styles.tile}>
         <div className={styles.avatar}>
           <Image src="/img/avatars/5.webp" alt="winking memoji" width={230} height={306} />
         </div>
@@ -17,23 +17,32 @@ export const AboutTile = () => {
           technologies enthusiast. I&apos;m in love with Flutter and Laravel ❤️ Constantly learning and discovering new
           stuff 📖
         </p>
-        <a href="#">
+
+        <Link href="#">
+          <a>
         <div className={styles.resume}>
-          Resume
+         My resume
           <span className={styles.arrow}>
             <Arrow />
           </span>
         </div>
         </a>
-    <a href="/about">
+        </Link>
+
+
+    <Link href="/about">
+      <a>
         <div className={styles.more}>
           Learn more
           <span className={styles.arrow}>
             <Arrow />
           </span>
-        </div> 
-        </a>
-      </a>
+        </div>
+         </a>
+        </Link>
+
+
+      </div>
    
   );
 };

@@ -35,7 +35,7 @@
     }
     .more {
         position: absolute;
-        right: 2rem;
+        right: 3rem;
         top: 2rem;
         font-size: 1.3rem;
         gap: 1rem;
@@ -59,8 +59,8 @@
     }
     .resume {
         position: absolute;
-        right: 5rem;
-        top: 2rem;
+        right: 3rem;
+        top: 6.5rem;
         font-size: 1.3rem;
         gap: 1rem;
         @include mixins.flex;

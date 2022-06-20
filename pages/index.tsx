@@ -12,7 +12,7 @@ import { Grid } from "components/common/grid/Grid";
 import { getNewestProjects } from "lib/projects";
 import type { InferGetStaticPropsType } from "types";
 import { getNewestPosts } from "lib/posts";
-import { ResumeTile, SpotifyMusicTile } from "components/tile/spotifyTile/SpotifyMusicTile";
+import { SpotifyMusicTile } from "components/tile/spotifyTile/SpotifyMusicTile";
 
 const Home: NextPage = ({ projects, posts }: InferGetStaticPropsType<GetStaticProps>) => {
   return (

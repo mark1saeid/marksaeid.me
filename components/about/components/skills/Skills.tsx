@@ -20,7 +20,8 @@ export const Skills = memo<SkillsProps>(({ skills }) => {
         {skills.map((skill) => {
         
 const ico = skill.link;
-          return (
+          
+return (
             <li className={styles.skill} key={skill.slug} style={{ color: skill.color }}>
               <a  className={styles.link}>
                 <span className={styles.label}>{skill.name}</span>
